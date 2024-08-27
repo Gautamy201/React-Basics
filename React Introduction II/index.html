@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 10px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        return (
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "25px" }}
+          >
+            <div
+              className="product-img"
+              style={{ width: "100%", height: "auto" }}
+            >
+              <img
+                style={{ width: "100%", height: "auto" }}
+                src="./watch.png"
+                alt="image"
+              />
+            </div>
+            <div className=".product-tile&price">
+              <h1>Automatic Watch</h1>
+              <p style={{ marginTop: "5px" }}>$350.00 USD</p>
+            </div>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+              harum, alias totam nesciunt nobis dolore aperiam dicta quidem nisi
+              minima quia, provident animi voluptatum ipsum repellendus labore
+              tempore recusandae dolores.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              dolore reiciendis molestiae repellat, recusandae sapiente ratione.
+              Corporis illo, consectetur illum distinctio dicta quibusdam at!
+              Nam blanditiis perspiciatis modi asperiores dolorum.
+            </p>
+
+            <hr />
+
+            <div>
+              <p style={{ color: "#e1b208", marginBottom: "10px" }}>Features</p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+                <div>
+                  <ul style={{ listStyleType: "none" }}>
+                    <li>Chronograph</li>
+                    <li>Master Charonometer Certified</li>
+                    <li>Tachymeter</li>
+                  </ul>
+                </div>
+                <div>
+                  <ul style={{ listStyleType: "none" }}>
+                    <li>Anti-Magnetic</li>
+                    <li>Charonometer</li>
+                    <li>Small seconds</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div>
+              <p style={{ color: "#e1b208", marginBottom: "10px" }}>
+                PRODUCT DETAILS
+              </p>
+              <ul style={{ listStyleType: "none" }}>
+                <li style={{ fontWeight: "600" }}>
+                  Between lugs :
+                  <span style={{ fontWeight: "500" }}> 20 mm</span>
+                </li>
+                <li style={{ fontWeight: "600" }}>
+                  Bracelet :
+                  <span style={{ fontWeight: "500" }}> lether strap</span>
+                </li>
+                <li style={{ fontWeight: "600" }}>
+                  Case : <span style={{ fontWeight: "500" }}> Steel</span>
+                </li>
+                <li style={{ fontWeight: "600" }}>
+                  Case diameter :
+                  <span style={{ fontWeight: "500" }}> 42 mm</span>
+                </li>
+                <li style={{ fontWeight: "600" }}>
+                  Dial color : <span style={{ fontWeight: "500" }}> Black</span>
+                </li>
+                <li style={{ fontWeight: "600" }}>
+                  Crystal :
+                  <span style={{ fontWeight: "500" }}>
+                    {" "}
+                    Domed, scratch-resistant sapphire crystal with
+                    anti-reflective treatment inside
+                  </span>
+                </li>
+                <li style={{ fontWeight: "600" }}>
+                  Water resistance :
+                  <span style={{ fontWeight: "500" }}>
+                    {" "}
+                    5 bar (50 metres/ 167 feet)
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <button
+              style={{
+                padding: "15px",
+                fontWeight: "600",
+                color: "white",
+                backgroundColor: "black",
+                letterSpacing: 1,
+                borderRadius: 5,
+                cursor: "pointer",
+              }}
+            >
+              ADD TO CART
+            </button>
+            <p
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "10px",
+              }}
+            >
+              <img
+                style={{ width: "30px", height: "30px" }}
+                src="./cargo-truck.png"
+                alt=""
+              />
+              2-3 business days delivery
+            </p>
+          </div>
+        );
+      }
+
+      // Render the component to the DOM
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

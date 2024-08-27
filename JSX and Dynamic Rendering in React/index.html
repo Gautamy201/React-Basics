@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Dynamic content
+      const text = "Seize the day";
+
+      // Conditional rendering
+      const isDaytime = true; // Try changing this to false
+
+      // JSX with dynamic content and conditional rendering
+      const element = (
+        <div>
+          <p>{text}</p>
+          {isDaytime ? (
+            <p>Good Morning! Seize the day</p>
+          ) : (
+            <p>Good Evening! Reflect on your day</p>
+          )}
+        </div>
+      );
+
+      // Render the element
+      ReactDOM.render(element, document.getElementById("root"));
+    </script>
+  </body>
+</html>
